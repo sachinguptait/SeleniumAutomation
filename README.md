@@ -1,1 +1,1 @@
-In this repo, I will new fetures related to Selenium 4 and other basic fetures too.
+In this repo, you will get new features related to Selenium 4 and other basic features too.
