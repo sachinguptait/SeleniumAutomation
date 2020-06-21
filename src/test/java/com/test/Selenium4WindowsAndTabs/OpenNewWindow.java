@@ -14,12 +14,12 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 import com.report.utility.ExtentTestManager;
-import com.selenium.library.SeleniumMethods;
+import com.selenium.library.SeleniumUtility;
 
 public class OpenNewWindow {
 
 	WebDriver driver;
-	SeleniumMethods seleniumMethods = new SeleniumMethods();
+	SeleniumUtility seleniumMethods = new SeleniumUtility();
 	String domainName = "newtours.demoaut.com";
 	String url1 = "https://google.in";
 	String url2 = "http://newtours.demoaut.com/";
