@@ -1,9 +1,7 @@
 package com.test.Selenium4ChromeDevTools;
-
 import java.time.Duration;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

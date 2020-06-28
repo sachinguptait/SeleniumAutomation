@@ -3,7 +3,6 @@ package com.test.Selenium4BasicFeatures;
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -13,24 +12,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Selenium4Features {
 
 	WebDriver driver;
 	
-	@BeforeClass
-	public void setUp()
-	{
-		WebDriverManager.chromedriver().setup();
-		WebDriverManager.chromedriver().version("83.0").arch64().setup();
-		driver=new ChromeDriver();
 	
-	}
+	  @BeforeClass public void setUp() { 
+		  WebDriverManager.chromedriver().setup();
+	  driver=new ChromeDriver(); 
+	  }
+	 
 	
 	@Test
-	public void selenium4Features() throws IOException
+	public void selenium4Features()
 	{
 		driver.get("https://www.irctc.co.in/");
 		
@@ -40,7 +36,12 @@ public class Selenium4Features {
 		
 		File src = logoIRCTC.getScreenshotAs(OutputType.FILE);
 		
-		FileUtils.copyFile(src, new File("./ScreenShot/logoIRCTC.png"));
+		try {
+			FileUtils.copyFile(src, new File("./ScreenShot/logoIRCTC.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		WebElement fromTxtBox = driver.findElement(By.cssSelector("input[placeholder='From*']"));
 		Rectangle rect = fromTxtBox.getRect();
@@ -49,10 +50,8 @@ public class Selenium4Features {
 		System.out.println(rect.getWidth());
 		System.out.println(rect.getX());
 		System.out.println(rect.getY());
-		
-		
+	
 		driver.manage().window().fullscreen();
-		
 		driver.manage().window().minimize();
 	}
 }

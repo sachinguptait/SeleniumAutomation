@@ -12,21 +12,23 @@ import org.testng.annotations.Test;
 public class LoginAppWithRelativeLocators {
 
 	@Test
-	public void testRegisterLinkWithRelativeLocators() {
+	public void loginAppWithRelativeLocators() {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		driver.get("http://newtours.demoaut.com/");
+		// driver.findElement(By.name("userName")).sendKeys("LearnAutomation");
 
-		// driver.findElement(RelativeLocator.withTagName("a").toRightOf(By.linkText("SIGN-ON"))).click();
+		driver.findElement(RelativeLocator.withTagName("input").above(By.name("password"))
+				.below(By.xpath("//td//b[text()='sign-in here']"))).sendKeys("LearnAutomation");
 
-		driver.findElement(
-				RelativeLocator.withTagName("a").toLeftOf(By.linkText("SUPPORT")).toRightOf(By.linkText("SIGN-ON")))
-				.click();
+		driver.findElement(By.name("password")).sendKeys("LearnAutomation@#");
 
-		Assert.assertTrue(driver.findElement(By.xpath("//b[text()='Email:']")).isDisplayed());
+		driver.findElement(RelativeLocator.withTagName("input").below(By.name("password"))).click();
+
+		Assert.assertTrue(driver.findElement(By.xpath("//b[text()='Passengers:']")).isDisplayed());
 
 		driver.quit();
 	}

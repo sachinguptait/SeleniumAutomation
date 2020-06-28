@@ -7,10 +7,16 @@
 	</listeners>
 	<test name="Test">
 		<classes>
+			<class name="com.test.Selenium4RelativeLocators.LoginAppWithRelativeLocators"/>
+			<class name="com.test.Selenium4RelativeLocators.ClickOnLinkWithRelativeLocators"/>
 			<class name="com.test.Selenium4WindowsAndTabs.OpenNewWindow" />
 			<class name="com.test.Selenium4WindowsAndTabs.OpenNewTab" />
-			<class name="com.test.Selenium4RelativeLocators.LoginAppWithRelativeLocators"/>
-			<class name="com.test.Selenium4RelativeLocators.RelativeLocatorsScenario2"/>
+			<class name="com.test.Selenium4ChromeDevTools.DifferentNetworkSpeed"></class>
+			<class name="com.test.Selenium4ChromeDevTools.EmulateGeoLocation"></class>
+			<class name="com.test.Selenium4ChromeDevTools.GettingChromeConsoleLogs"></class>
+			<class name="com.test.Selenium4ChromeDevTools.InterceptNetwork"></class>
+			<class name="com.test.Selenium4ChromeDevTools.OfflineChromeNetwork"></class>
+			<class name="com.test.Selenium4ChromeDevTools.OpenInsecureWebsite"></class>
 		</classes>
 	</test>
 </suite>

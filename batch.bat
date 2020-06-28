@@ -1,1 +1,1 @@
-mvn test -Dsurefire.suiteXmlFiles=testng.xml
+mvn clean compile && mvn test -DSuiteXmlFiles=testng.xml && cmd /k ipconfig

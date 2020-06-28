@@ -31,15 +31,27 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M5</version>
 				<configuration>
-					<!-- <forkCount>0</forkCount> <suiteXmlFiles> <suiteXmlFile>/vlcmapitesting/testng.xml</suiteXmlFile> 
-						</suiteXmlFiles> -->
-					<DxmlFileName>testng.xml</DxmlFileName>
+					<suiteXmlFiles>${SuiteXmlFiles}</suiteXmlFiles>
 				</configuration>
 			</plugin>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <configuration>
+                    <classesDirectory>${project.build.directory}/${artifactId}.jar.original</classesDirectory>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
+	
+	<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.0.0-alpha-5</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
@@ -50,15 +62,8 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.1.0</version>
-			<scope>test</scope>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>4.0.0-alpha-5</version>
+			<version>7.0.0</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
@@ -101,12 +106,6 @@
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>3.7.1</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>23.0</version>
 		</dependency>
 	</dependencies>
 </project>

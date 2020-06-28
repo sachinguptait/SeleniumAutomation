@@ -40,5 +40,6 @@ public class WebDriverManagerTest {
 		WebElement searchTextElement = driver.findElement(By.name("q"));
 		searchTextElement.sendKeys("webdrivermanager");
 		searchTextElement.sendKeys(Keys.ENTER);
+		driver.close();
 	}
 }
