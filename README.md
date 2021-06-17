@@ -1,4 +1,4 @@
-# Selenium Automation Framework, In this repository, I have covered below topics with examples.
+# Selenium Automation Framework, In this repository, I have covered below topics with examples
 
 #### * How to get Console Logs in Chrome Browser (New Feature of Selenium 4)
 #### * How to open insecure website in Chrome Browser (New Feature of Selenium 4)
