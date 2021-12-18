@@ -10,7 +10,7 @@
 #### * Open New Window and New Tab using by Selenium 4 Feature
 #### * Avoid chrome driver downloading manually (Using by WebDriverManager)
 #### * Builder Pattern, how to call many methods as a chain, Example: RestAssured.given().param("name", "Bob").when().get().then().extract();
-#### **********************************************************************************************************************
+#### ***************************************************************************************************************
 ## Please go through below videos for detailed information:- [Click here for Subscribe the YouTube Channel](https://www.youtube.com/channel/UCLTE4_DaxM3w2pqjIrnkO8A?sub_confirmation=1)
 
 [![How to get console logs](https://img.youtube.com/vi/TpAdcLz6H-w/0.jpg)](https://www.youtube.com/watch?v=TpAdcLz6H-w "Console Logs")
